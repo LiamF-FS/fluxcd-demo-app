@@ -10,7 +10,7 @@ def create_app():
 
     CORS(app, resources={r"*": {"origins": origins}})
 
-    @app.route('/spin-da-rodent')
+    @app.route('/spin-foundry')
     def lets_spin():
 
         return { 'spins': randrange(10) }, 200
