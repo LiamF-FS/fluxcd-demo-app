@@ -41,7 +41,7 @@ jobs:
         with:
           context: ./client
           push: true
-          tags: ${{ secrets.ACR_REGISTRY }}/${{PLACEHOLDER}}/client:dev-${{ needs.bump_version.outputs.version }}
+          tags: ${{ secrets.ACR_REGISTRY }}/PLACEHOLDER/client:dev-${{ needs.bump_version.outputs.version }}
 
   build_push_api:
     runs-on: ubuntu-latest
@@ -62,4 +62,4 @@ jobs:
         with:
           context: ./server
           push: true
-          tags: ${{ secrets.ACR_REGISTRY }}/${{PLACEHOLDER}}/server:dev-${{ needs.bump_version.outputs.version }}
+          tags: ${{ secrets.ACR_REGISTRY }}/PLACEHOLDER/server:dev-${{ needs.bump_version.outputs.version }}
